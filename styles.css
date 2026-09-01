@@ -1,3 +1,7 @@
+* {
+	font-family: "Asap Sharp", sans-serif;
+}
+
 .gray_box {
 	background-color: #f2f2f2;
 	padding: 10px;
@@ -26,6 +30,24 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+}
+
+footer {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 10px 0;
+
+	background-color: #4fd6ff;
+	color: #ffffff;
+}
+
+footer a {
+	color: #ffffff;
 }
 
 .party-switches {

@@ -5,15 +5,18 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Assembling a coalition</title>
 	<link rel="stylesheet" href="styles.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Asap+Sharp:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
 	<center>
 		<h1>Assembling a coalition</h1>
 	</center>
 	<div class="elections">
-		<button id="2023" onclick="elections('2023')">2023</button>
-		<button id="2019" onclick="elections('2019')">2019</button>
-		<button id="2015" onclick="elections('2015')">2015</button>
+		<button id="2023" class="election-button" onclick="elections('2023')">2023</button>
+		<button id="2019" class="election-button" onclick="elections('2019')">2019</button>
+		<button id="2015" class="election-button" onclick="elections('2015')">2015</button>
 	</div>
 	<div class="switch-container center">
 		<div class="left-parties party-container">
@@ -126,3 +129,6 @@
 	</center>
 	<script src="script.js"></script>
 </body>
+<footer>
+	<p>Made by <a href="https://github.com/elkkumorsa123" target="_blank"><b>ElkkuSorsa </b><3</a></p>
+</footer>
