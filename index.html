@@ -10,125 +10,128 @@
 	<link href="https://fonts.googleapis.com/css2?family=Asap+Sharp:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-	<center>
-		<h1>Assembling a coalition</h1>
-	</center>
-	<div class="elections">
-		<button id="2023" class="election-button" onclick="elections('2023')">2023</button>
-		<button id="2019" class="election-button" onclick="elections('2019')">2019</button>
-		<button id="2015" class="election-button" onclick="elections('2015')">2015</button>
-	</div>
-	<div class="switch-container center">
-		<div class="left-parties party-container">
-			<label class="party-class-label">
-				<p>Left-wing parties</p>
-			</label>
-			<div class="party-switches">
-				<label class="vas_switch party">
-					<div class="party-name">
-						<p>Left Alliance</p>
-						<p class="seat-count">16 seats</p>
-					</div>
-					<input type="checkbox" onclick="toggleParty('vas')">
-					<span class="slider"></span>
+	<main>
+		<center>
+			<h1>Assembling a coalition</h1>
+			<h3>Choose the election year and the parties to include in the coalition. The simulation will show the historical coalition on default. Note that some parties aren't able to form a coalition parties too far from their ideology.</h3>
+		</center>
+		<div class="elections">
+			<button id="2023" class="election-button" onclick="elections('2023')">2023</button>
+			<button id="2019" class="election-button" onclick="elections('2019')">2019</button>
+			<button id="2015" class="election-button" onclick="elections('2015')">2015</button>
+		</div>
+		<div class="switch-container center">
+			<div class="left-parties party-container">
+				<label class="party-class-label">
+					<p>Left-wing parties</p>
 				</label>
+				<div class="party-switches">
+					<label class="vas_switch party">
+						<div class="party-name">
+							<p>Left Alliance</p>
+							<p class="seat-count">16 seats</p>
+						</div>
+						<input type="checkbox" onclick="toggleParty('vas')">
+						<span class="slider"></span>
+					</label>
 
-				<label class="vihr_switch party">
-					<div class="party-name">
-						<p>Green League</p>
-						<p class="seat-count">20 seats</p>
-					</div>
-					<input type="checkbox" onclick="toggleParty('vihr')">
-					<span class="slider"></span>
-				</label>
+					<label class="vihr_switch party">
+						<div class="party-name">
+							<p>Green League</p>
+							<p class="seat-count">20 seats</p>
+						</div>
+						<input type="checkbox" onclick="toggleParty('vihr')">
+						<span class="slider"></span>
+					</label>
 
-				<label class="sd_switch party">
-					<div class="party-name">
-						<p>Social Democratic Party</p>
-						<p class="seat-count">12 seats</p>
-					</div>
-					<input type="checkbox" onclick="toggleParty('sd')">
-					<span class="slider"></span>
+					<label class="sd_switch party">
+						<div class="party-name">
+							<p>Social Democratic Party</p>
+							<p class="seat-count">12 seats</p>
+						</div>
+						<input type="checkbox" onclick="toggleParty('sd')">
+						<span class="slider"></span>
+					</label>
+				</div>
+			</div>
+
+			<div class="center-parties party-container">
+				<label class="party-class-label">
+					<p>Centrist/Liberal parties</p>
 				</label>
+				<div class="party-switches">
+					<label class="kesk_switch party">
+						<div class="party-name">
+							<p>Centre Party</p>
+							<p class="seat-count">12 seats</p>
+						</div>
+						<input type="checkbox" onclick="toggleParty('kesk')">
+						<span class="slider"></span>
+					</label>
+
+					<label class="rkp_switch party">
+						<div class="party-name">
+							<p>Swedish People's Party</p>
+							<p class="seat-count">12 seats</p>
+						</div>
+						<input type="checkbox" onclick="toggleParty('rkp')">
+						<span class="slider"></span>
+					</label>
+				</div>
+			</div>
+
+			<div class="right-parties party-container">
+				<label class="party-class-label">
+					<p>Right-wing Parties</p>
+				</label>
+				<div class="party-switches">
+					<label class="kok_switch party">
+						<div class="party-name">
+							<p>National Coalition Party</p>
+							<p class="seat-count">12 seats</p>
+						</div>
+						<input type="checkbox" onclick="toggleParty('kok')">
+						<span class="slider"></span>
+					</label>
+
+					<label class="kd_switch party">
+						<div class="party-name">
+							<p>Christian Democratic Party</p>
+							<p class="seat-count">12 seats</p>
+						</div>
+						<input type="checkbox" onclick="toggleParty('kd')">
+						<span class="slider"></span>
+					</label>
+
+					<label class="ps_switch party">
+						<div class="party-name">
+							<p>Finns Party</p>
+							<p class="seat-count">12 seats</p>
+						</div>
+						<input type="checkbox" onclick="toggleParty('ps')">
+						<span class="slider"></span>
+					</label>
+				</div>
 			</div>
 		</div>
-
-		<div class="center-parties party-container">
-			<label class="party-class-label">
-				<p>Centrist/Liberal parties</p>
-			</label>
-			<div class="party-switches">
-				<label class="kesk_switch party">
-					<div class="party-name">
-						<p>Centre Party</p>
-						<p class="seat-count">12 seats</p>
-					</div>
-					<input type="checkbox" onclick="toggleParty('kesk')">
-					<span class="slider"></span>
-				</label>
-
-				<label class="rkp_switch party">
-					<div class="party-name">
-						<p>Swedish People's Party</p>
-						<p class="seat-count">12 seats</p>
-					</div>
-					<input type="checkbox" onclick="toggleParty('rkp')">
-					<span class="slider"></span>
-				</label>
+		<center>
+			<div class="gray_box">
+				<div class="coalition-info">
+					<progress class="coalition-progress" id="coalition-progress" value="0" max="200" data-label="Coalition status: Not enough seats"></progress>
+					<p id="coalition-seats">Seats in coalition: 0</p>
+				</div>
+				<div class="coalition-presets">
+					<button id="left-coalition" onclick="presetCoalition('left')">Red-earth coalition</button>
+					<button id="right-coalition" onclick="presetCoalition('right')">Right-wing coalition</button>
+					<button id="centrist-coalition" onclick="presetCoalition('grand')">Grand coalition</button>
+					<button id="clear-coalition" onclick="presetCoalition('historical')">Historical coalition</button>
+					<button id="clear-coalition" onclick="resetParties()">Clear coalition</button>
+				</div>
 			</div>
-		</div>
-
-		<div class="right-parties party-container">
-			<label class="party-class-label">
-				<p>Right-wing Parties</p>
-			</label>
-			<div class="party-switches">
-				<label class="kok_switch party">
-					<div class="party-name">
-						<p>National Coalition Party</p>
-						<p class="seat-count">12 seats</p>
-					</div>
-					<input type="checkbox" onclick="toggleParty('kok')">
-					<span class="slider"></span>
-				</label>
-
-				<label class="kd_switch party">
-					<div class="party-name">
-						<p>Christian Democratic Party</p>
-						<p class="seat-count">12 seats</p>
-					</div>
-					<input type="checkbox" onclick="toggleParty('kd')">
-					<span class="slider"></span>
-				</label>
-
-				<label class="ps_switch party">
-					<div class="party-name">
-						<p>Finns Party</p>
-						<p class="seat-count">12 seats</p>
-					</div>
-					<input type="checkbox" onclick="toggleParty('ps')">
-					<span class="slider"></span>
-				</label>
-			</div>
-		</div>
-	</div>
-	<center>
-		<div class="gray_box">
-			<div class="coalition-info">
-				<progress class="coalition-progress" id="coalition-progress" value="0" max="200" data-label="Coalition status: Not enough seats"></progress>
-				<p id="coalition-seats">Seats in coalition: 0</p>
-			</div>
-			<div class="coalition-presets">
-				<button id="left-coalition" onclick="presetCoalition('left')">Red-earth coalition</button>
-				<button id="right-coalition" onclick="presetCoalition('right')">Right-wing coalition</button>
-				<button id="centrist-coalition" onclick="presetCoalition('grand')">Grand coalition</button>
-				<button id="clear-coalition" onclick="presetCoalition('historical')">Historical coalition</button>
-				<button id="clear-coalition" onclick="resetParties()">Clear coalition</button>
-			</div>
-		</div>
-	</center>
-	<script src="script.js"></script>
+		</center>
+		<script src="script.js"></script>
+	</main>
+	<footer>
+		<p>Made by <a href="https://github.com/elkkumorsa123" target="_blank"><b>ElkkuSorsa </b><3</a></p>
+	</footer>
 </body>
-<footer>
-	<p>Made by <a href="https://github.com/elkkumorsa123" target="_blank"><b>ElkkuSorsa </b><3</a></p>
-</footer>
