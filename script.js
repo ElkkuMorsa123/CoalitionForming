@@ -16,7 +16,7 @@ var kokSeats = 48;
 var kdSeats = 5;
 var psSeats = 46;
 
-var year = 2023;
+var curyear = 2023;
 
 rkp.checked = true;
 kok.checked = true;
@@ -119,9 +119,9 @@ function calculateCoalitionSeats() {
 }
 
 function elections(year) {
+	curyear = year;
 	resetParties();
 	if (year == 2023) {
-		year = 2023;
 		vasSeats = 11;
 		vihrSeats = 13;
 		sdSeats = 43;
@@ -137,7 +137,6 @@ function elections(year) {
 
 	}
 	else if (year == 2019) {
-		year = 2019;
 		vasSeats = 16;
 		vihrSeats = 20;
 		sdSeats = 40;
@@ -153,7 +152,6 @@ function elections(year) {
 
 	}
 	else if (year == 2015) {
-		year = 2015;
 		vasSeats = 12;
 		vihrSeats = 15;
 		sdSeats = 34;
@@ -227,7 +225,7 @@ function presetCoalition(preset) {
 		ps.disabled = true;
 	}
 	else if (preset == "historical") {
-		if (year == 2023) {
+		if (curyear == 2023) {
 			kok.checked = true;
 			kd.checked = true;
 			ps.checked = true;
@@ -237,7 +235,7 @@ function presetCoalition(preset) {
 			vihr.disabled = true;
 			sd.disabled = true;
 		}
-		else if (year == 2019) {
+		else if (curyear == 2019) {
 			vas.checked = true;
 			vihr.checked = true;
 			sd.checked = true;
@@ -249,7 +247,7 @@ function presetCoalition(preset) {
 			ps.disabled = true;
 		}
 
-		else if (year == 2015) {
+		else if (curyear == 2015) {
 			kesk.checked = true;
 			kok.checked = true;
 			ps.checked = true;
