@@ -1,0 +1,181 @@
+.gray_box {
+	background-color: #f2f2f2;
+	padding: 10px;
+	border-radius: 20px;
+	margin: 15px;
+}
+
+.party {
+	display: flex;
+	margin-right: 10px;
+}
+
+.center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.party-container {
+	flex: 1;
+	padding: 5px 10px;
+}
+
+.party-switches {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+.left-parties {
+	background-color: #ffe4e4;
+	border-radius: 20px 0 0 20px;
+}
+.right-parties {
+	background-color: #d5f3ff;
+	border-radius: 0 20px 20px 0;
+}
+
+.center-parties {
+	background-color: #fffee1;
+}
+
+.party-class-label {
+	font-size: 25px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center
+}
+
+.party-name {
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	line-height: 0.2;
+}
+
+.seat-count	{
+	font-size: 14px;
+}
+
+.elections {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+
+	padding-bottom: 10px;
+}
+
+progress {
+  margin-top: 10px;
+  text-align: center;
+  height: 1.5em;
+  width: 50%;
+  -webkit-appearance: none;
+  border: none;
+  
+  position:relative;
+}
+progress:before {
+  content: attr(data-label);
+  font-size: 18px;
+  
+  position:absolute;
+  left:0;
+  right:0;
+  
+}
+progress::-webkit-progress-bar {
+  background-color: #c9c9c9;
+  border-radius: 40px
+}
+.enough-seats::-webkit-progress-value {
+  background-color: #7cffa8;
+  border-radius: 40px
+}
+
+.not-enough-seats::-webkit-progress-value {
+  background-color: #ff7c7c;
+  border-radius: 40px
+}
+
+.elections button {
+	margin-right: 10px;
+}
+
+.coalition-presets {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+.coalition-presets button {
+	margin-right: 10px;
+}
+
+.vas_switch {
+	display: inline-block;
+	padding: 0.25rem 0.5rem;
+	border-radius: 4px;
+	background-color: #FF78C8;
+	color: #ffffff;
+}
+
+.vihr_switch {
+	display: inline-block;
+	padding: 0.25rem 0.5rem;
+	border-radius: 4px;
+	background-color: #d9ea9a;
+}
+
+.sd_switch {
+	display: inline-block;
+	padding: 0.25rem 0.5rem;
+	border-radius: 4px;
+	background-color: #E11931;
+	color: #ffffff;
+}
+
+.kesk_switch {
+	display: inline-block;
+	padding: 0.25rem 0.5rem;
+	border-radius: 4px;
+	background-color: #01954B;
+	color: #ffffff;
+}
+
+.rkp_switch {
+	display: inline-block;
+	padding: 0.25rem 0.5rem;
+	border-radius: 4px;
+	background-color: #FFDD93;
+}
+
+.kok_switch {
+	display: inline-block;
+	padding: 0.25rem 0.5rem;
+	border-radius: 4px;
+	background-color: #003859;
+	color: #ffffff;
+}
+
+.kd_switch {
+	display: inline-block;
+	padding: 0.25rem 0.5rem;
+	border-radius: 4px;
+	background-color: #2B67C9;
+	color: #ffffff;
+}
+
+.ps_switch {
+	display: inline-block;
+	padding: 0.25rem 0.5rem;
+	border-radius: 4px;
+	background-color: #FFCC00;
+	margin-right: -10px;
+}
