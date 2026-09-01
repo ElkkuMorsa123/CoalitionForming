@@ -169,6 +169,7 @@ function elections(year) {
 
 	toggleParty();
 	setSeats();
+	presetCoalition("historical");
 }
 
 function setSeats() {

@@ -2,12 +2,14 @@
 	background-color: #f2f2f2;
 	padding: 10px;
 	border-radius: 20px;
-	margin: 15px;
+	margin: 15px auto;
+	width: 100%;
+	max-width: fit-content;
+	box-sizing: border-box;
 }
 
 .party {
 	display: flex;
-	margin-right: 10px;
 }
 
 .center {
@@ -18,14 +20,22 @@
 
 .party-container {
 	flex: 1;
-	padding: 5px 10px;
+	padding: 10px;
+	width: 100%;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .party-switches {
 	display: flex;
+	flex-wrap: wrap;
 	align-items: center;
 	justify-content: center;
 	text-align: center;
+	width: 100%;
+	gap: 8px;
 }
 
 .left-parties {
@@ -57,6 +67,18 @@
 	line-height: 0.2;
 }
 
+@media (max-width: 768px) {
+	.party-name {
+		line-height: 1.2;
+	}
+	.right-parties {
+		border-radius: 20px 20px 20px 20px;
+	}
+	.left-parties {
+		border-radius: 20px 20px 20px 20px;
+	}
+}
+
 .seat-count	{
 	font-size: 14px;
 }
@@ -74,7 +96,7 @@ progress {
   margin-top: 10px;
   text-align: center;
   height: 1.5em;
-  width: 50%;
+  width: 90%;
   -webkit-appearance: none;
   border: none;
   
@@ -177,5 +199,4 @@ progress::-webkit-progress-bar {
 	padding: 0.25rem 0.5rem;
 	border-radius: 4px;
 	background-color: #FFCC00;
-	margin-right: -10px;
 }
